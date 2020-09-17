@@ -1,0 +1,31 @@
+{
+  "name": "nexus-example",
+  "version": "0.0.1",
+  "dependencies": {
+    "bcryptjs": "2.4.3",
+    "jsonwebtoken": "8.5.1",
+    "nexus": "^0.25.0",
+    "nexus-plugin-jwt-auth": "^1.0.0",
+    "nexus-plugin-prisma": "^0.16.1",
+    "nexus-plugin-shield": "^0.1.2"
+  },
+  "scripts": {
+    "format": "npx prettier --write './**/*.{ts,md}'",
+    "dev": "nexus dev",
+    "migrate:save": "npx prisma migrate save --experimental",
+    "migrate:up": "npx prisma migrate up --experimental",
+    "migrate:seed": "npx ts-node prisma/seed.ts",
+    "build": "nexus build",
+    "start": "node node_modules/.build"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "2.4.2",
+    "@types/jsonwebtoken": "8.5.0",
+    "prettier": "2.0.5"
+  }
+}
